@@ -1,0 +1,39 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 84px;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 24px);
+  z-index: 1;
+  background-color: transparent;
+}
+
+.logo {
+  padding-top: 8px;
+  width: 56px;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.icon {
+  margin: 8px;
+  color: var(--icon-color);
+}
+
+@media only screen and (max-width: 1024px) {
+  .headerContainer {
+    background-color: var(--background-color);
+  }
+}

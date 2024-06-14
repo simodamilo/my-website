@@ -1,0 +1,24 @@
+.aboutContainer {
+  padding: 24px;
+  padding-top: 108px;
+  margin-top: 84px;
+  height: calc(100vh - 216px);
+}
+
+.navBtnAbout {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.contentContainer {
+  height: calc(100vh - 156px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  align-items: center;
+}
+

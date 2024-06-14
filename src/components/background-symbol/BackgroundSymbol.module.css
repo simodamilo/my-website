@@ -1,0 +1,31 @@
+.boxParent {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+
+.symbol {
+  background-color: transparent;
+  border: 4px solid var(--background-symbols);
+  width: 92px;
+  height: 92px;
+}
+
+.circle {
+  border-radius: 50px;
+}
+
+.square {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*.symbol {
+    display: none;
+  }
+
+  .boxParent {
+    display: none;
+  }*/
+}

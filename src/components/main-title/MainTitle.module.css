@@ -1,0 +1,72 @@
+.mainTitle {
+  font-size: 54px;
+  font-weight: 900;
+  text-align: center;
+  font-family: var(--font-family);
+  line-height: 0.6;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+/*@media (hover: hover) { 
+  .mainTitle:hover { 
+    font-size: 64px;
+    transition: 2s;
+  } 
+
+  .mainTitle:not(:hover) {
+    font-size: 54px;
+    transition: 2s;
+  }
+}*/
+
+@media only screen and (max-width: 600px) {
+  .mainTitle {
+    font-size: 36px;
+  }
+}
+
+/*.mainTitle {
+  font-size: 10px;
+  font-weight: 900;
+  text-align: center;
+  font-family: monospace;
+  line-height: 0.6;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+.p1 {
+  animation: 0.3s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  margin: 0px;
+  letter-spacing: -2px;
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mainTitle {
+    font-size: 8px;
+  }
+}
+
+@media not all and (hover: none) {
+  .mainTitle:hover {
+    font-size: 12px;
+    transition: 1s;
+  }
+  
+  .mainTitle:not(:hover) {
+    font-size: 10px;
+    transition: 1s;
+  }
+}*/
