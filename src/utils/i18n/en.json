@@ -4,8 +4,11 @@
       "intro-copy": "I'm Simone D'Amilo",
       "hello-world": "Hello, World!",
       "about-me": "About me",
-      "experiences": "Experiences",
+      "experiences": "Experience",
       "software-eng": "Software Engineer"
+    },
+    "about": {
+      "homepage": "Homepage"
     }
   }
 }

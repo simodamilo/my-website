@@ -50,9 +50,9 @@ function App() {
 				</Routes>
 			</AnimatePresence>
 			<Footer/>
-			{element && width < 768 && <BottomBar/>}
+			{element && width <= 751 && <BottomBar/>}
 
-			{element && width > 1200 && [...Array(width > 1200 ? 10 : 4)].map((e, i) => 
+			{element && width > 751 && [...Array(width > 1200 ? 10 : 4)].map((e, i) => 
 				<BackgroundSymbol 
 					initPosX={Math.random() * (element!.clientWidth-100) + 1}
 					initPosY={Math.random() * (element!.clientHeight-100)}

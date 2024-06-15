@@ -1,25 +1,29 @@
-html {
-  overflow-x: hidden;
+.main {
+  display: flex;
+  justify-content: center;
 }
 
 .homepageContainer {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   padding: 24px;
   margin-top: 84px;
-  height: calc(100vh - 132px);
+  min-height: calc(100vh - 132px);
+  height: 100%;
 }
 
 .firstColumn {
-  width: 66%;
-  height: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: start;
+  flex-direction: column;
 }
 
 .textModuleContainer {
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -27,33 +31,39 @@ html {
 
 .imgContainer {
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .mainImg {
-  width: 500px;
+  width: 480px;
   height: fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .secondColumn {
-  width: 33%;
-  height: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
+.navigationContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .navBtn1 {
-  padding-right: 30px;
+  padding-right: 35px;
   display: flex;
   justify-content: center;
 }
 
 .navBtn2 {
-  padding-left: 30px;
+  padding-left: 35px;
   margin-top: 1px;
   display: flex;
   justify-content: center;
@@ -62,56 +72,36 @@ html {
 .clip1 {
   clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
   background-color: var(--primary-color);
-  width: 10px;
-  height: 20px;
+  width: 15px;
+  height: 25px;
   margin: 0px auto;
   margin-bottom: 1px;
 }
 
 .clip2 {
   background-color: var(--primary-color);
-  width: 10px;
-  height: 100px;
+  width: 15px;
+  height: 110px;
   margin: 0px auto;
   margin-top: 1px;
 }
 
-@media only screen and (max-width: 2400px) {
-  .firstColumn {
-    flex-direction: column;
-    width: 50%;
-    padding-left: 10%;
-    align-items: left;
-  }
-
-  .textModuleContainer, .imgContainer {
-    width: 100%;
-    justify-content: start;
-  }
-
-  .secondColumn {
-    width: 33%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 959px) {
   .homepageContainer {
     display: block;
     padding-left: 12px;
     padding-right: 12px;
-    width: calc(100% - 24px);
+    min-height: calc(100vh - 282px);
   }
 
   .firstColumn {
     width: 100%;
     height: auto;
     align-items: center;
-    padding-left: 0px;
   }
 
   .mainImg {
-    width: 60%;
-    height: auto;
+    width: 550px;
   }
 
   .secondColumn {
@@ -120,7 +110,11 @@ html {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .homepageContainer {
+    min-height: calc(100vh - 357px);
+  }
+
   .mainImg {
     width: 90%;
     height: auto;

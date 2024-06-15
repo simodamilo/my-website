@@ -1,11 +1,20 @@
-.aboutContainer {
-  padding: 24px;
-  padding-top: 108px;
-  margin-top: 84px;
-  height: calc(100vh - 216px);
+.main {
+  display: flex;
+  justify-content: center;
 }
 
-.navBtnAbout {
+.aboutContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin-top: 84px;
+  min-height: calc(100vh - 132px);
+  height: 100%;
+}
+
+.navBtn {
   width: 100%;
   display: flex;
   justify-content: end;

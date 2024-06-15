@@ -1,10 +1,10 @@
 import style from './Homepage.module.css';
-import NavigationButton from '../../components/navigation-button/NavigationButton';
 import { motion } from "framer-motion";
-import mainImage from '../../assets/main-transparent.png';
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
+import mainImage from '../../assets/main-transparent.png';
 import TextMainBlock from '../../components/text-main-block/TextMainBlock';
+import NavigationButton from '../../components/navigation-button/NavigationButton';
 
 interface HomepageProps {
   width: number;
@@ -20,6 +20,7 @@ function Homepage({ width }: HomepageProps) {
       animate={{ x: '0vh', opacity: 1 }}
       exit={{ x: newPage, opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className={style.main}
     >
       <div className={style.homepageContainer}>
         <div className={style.firstColumn}>
@@ -30,8 +31,8 @@ function Homepage({ width }: HomepageProps) {
             <img alt='' src={mainImage} className={style.mainImg}></img>
           </div>
         </div>
-        {width > 768 && <div className={style.secondColumn}>
-          <div>
+        {width > 751 && <div className={style.secondColumn}>
+          <div className={style.navigationContainer}>
             <div className={style.clip1}></div>
             <div className={style.navBtn1}>
               <NavigationButton label={t('homepage.about-me')} direction='left' to='/about' setNewPage={setNewPage}/>
