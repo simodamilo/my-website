@@ -10,7 +10,7 @@ function TextMainBlock() {
     <div className={style.content}>
       <MainTitle/>
       <h2 className={style.subtitle}>{t('homepage.intro-copy')}</h2>
-      <p className={style.par1}>{t('homepage.software-eng')}</p>
+      <p className={style.p1}>{t('homepage.software-eng')}</p>
       <div className={style.skillContainer}>
         {skills.map((skill) => 
           <div className={style.skill} key={skill}>

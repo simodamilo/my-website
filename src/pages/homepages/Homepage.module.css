@@ -10,22 +10,36 @@ html {
 }
 
 .firstColumn {
-  width: 50%;
+  width: 66%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.textModuleContainer {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer {
+  display: flex;
+  width: 50%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .mainImg {
-  width: 400px;
-  height: auto;
-  margin-top: 15%;
+  width: 500px;
+  height: fit-content;
 }
 
 .secondColumn {
-  width: 50%;
+  width: 33%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -62,7 +76,25 @@ html {
   margin-top: 1px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 2400px) {
+  .firstColumn {
+    flex-direction: column;
+    width: 50%;
+    padding-left: 10%;
+    align-items: left;
+  }
+
+  .textModuleContainer, .imgContainer {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .secondColumn {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
   .homepageContainer {
     display: block;
     padding-left: 12px;
@@ -73,10 +105,12 @@ html {
   .firstColumn {
     width: 100%;
     height: auto;
+    align-items: center;
+    padding-left: 0px;
   }
 
   .mainImg {
-    width: 50%;
+    width: 60%;
     height: auto;
   }
 

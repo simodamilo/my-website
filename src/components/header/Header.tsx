@@ -13,9 +13,16 @@ interface HeaderProp {
 }
 
 function Header({ lang, changeLanguageHandler } : HeaderProp) {
+  const myNav = document.getElementById('header')
+
+  window.onscroll = function() {
+    window.scrollY > 0 ?
+      myNav!.style.background = '#fafafa' :
+      myNav!.style.background = 'none'
+  }
 
   return (
-    <div className={style.headerContainer}>
+    <div id='header' className={style.headerContainer}>
       <div>
         <Link to='/'>
           <img alt='' src={LogoWhite} className={style.logo}></img>

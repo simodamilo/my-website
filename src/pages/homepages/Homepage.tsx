@@ -6,7 +6,11 @@ import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import TextMainBlock from '../../components/text-main-block/TextMainBlock';
 
-function Homepage() {
+interface HomepageProps {
+  width: number;
+}
+
+function Homepage({ width }: HomepageProps) {
 	const { t } = useTranslation();
   const [ newPage, setNewPage ] = useState('');
 
@@ -19,10 +23,14 @@ function Homepage() {
     >
       <div className={style.homepageContainer}>
         <div className={style.firstColumn}>
-          <TextMainBlock/>
-          <img alt='' src={mainImage} className={style.mainImg}></img>
+          <div className={style.textModuleContainer}>
+            <TextMainBlock/>
+          </div>
+          <div className={style.imgContainer}>
+            <img alt='' src={mainImage} className={style.mainImg}></img>
+          </div>
         </div>
-        <div className={style.secondColumn}>
+        {width > 768 && <div className={style.secondColumn}>
           <div>
             <div className={style.clip1}></div>
             <div className={style.navBtn1}>
@@ -33,7 +41,7 @@ function Homepage() {
             </div>
             <div className={style.clip2}></div>
           </div>
-        </div>
+        </div>}
       </div>
     </motion.main>
   );
