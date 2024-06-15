@@ -5,7 +5,10 @@ body {
   --icon-color: #1f2023;
   --border-color: #caced1;
   --background-symbols: #e6e6e6;
+  --navigation-color: #1f2023;
+
   --font-family: monospace;
+  --footer-color: #af6eeb;
 }
 
 .dark {
@@ -15,6 +18,7 @@ body {
   --icon-color: #fafafa;
   --border-color: #545b60;
   --background-symbols: #43454c;
+  --navigation-color: #fafafa;
 }
 
 @media only screen and (max-width: 600px) {

@@ -8,27 +8,15 @@
 }
 
 .subtitle {
-  font-size: 36px;
+  font-size: 44px;
   color: var(--secondary-color);
   font-family: var(--font-family);
   text-align: left;
   margin: 24px 0px 0px 0px;
 }
 
-/*@media (hover: hover) { 
-  .subtitle:hover { 
-    font-size: 46px;
-    transition: 2s;
-  } 
-
-  .subtitle:not(:hover) {
-    font-size: 36px;
-    transition: 2s;
-  }
-}*/
-
-.par1 {
-  font-size: 22px;
+.p1 {
+  font-size: 26px;
   color: var(--primary-color);
   font-family: var(--font-family);
   text-align: left;
@@ -36,37 +24,41 @@
   margin: 24px 0px 0px 0px;
 }
 
-/*@media (hover: hover) { 
-  .par1:hover { 
-    font-size: 26px;
-    transition: 2s;
-  } 
-
-  .par1:not(:hover) {
-    font-size: 22px;
-    transition: 2s;
-  }
-}*/
-
 .skillContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   text-align: left;
-  max-width: 100%;
-  margin: 0px;
 }
 
 .skill {
-  font-size: 14px;
+  display: inline-block;
   background-color: var(--primary-color);
-  color: var(--background-color);
+  color: #FFFFFF;
   font-family: var(--font-family);
   border-radius: 21px;
   box-shadow: 0 15px 15px rgba(0,0,0,.36);
-  padding: 8px 4px;
+  font-size: 18px;
+  padding: 10px 14px;
   margin-right: 6px;
   margin-top: 12px;
   text-align: center;
+}
+
+@media only screen and (max-width: 2400px) {
+  .subtitle {
+    font-size: 36px;
+  }
+
+  .p1 {
+    font-size: 22px;
+  }
+
+  .skill {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -84,14 +76,7 @@
 
   .skill {
     font-size: 12px;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    font-family: var(--font-family);
     border-radius: 21px;
-    box-shadow: 0 15px 15px rgba(0,0,0,.36);
-    padding: 6px 4px;
-    margin-right: 6px;
-    margin-top: 12px;
-    text-align: center;
+    padding: 8px 8px;
   }
 }

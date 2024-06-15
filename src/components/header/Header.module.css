@@ -1,9 +1,7 @@
 .headerContainer {
   display: flex;
   justify-content: space-between;
-  padding: 0px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 0px 12px 0px 12px;
   height: 84px;
   position: fixed;
   top: 0;
@@ -30,10 +28,4 @@
 .icon {
   margin: 8px;
   color: var(--icon-color);
-}
-
-@media only screen and (max-width: 1024px) {
-  .headerContainer {
-    background-color: var(--background-color);
-  }
 }
