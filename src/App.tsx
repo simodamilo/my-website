@@ -15,7 +15,17 @@ function App() {
 	const [ lang, setLang ] = useState<string>(language);
 	const [ width, setWidth ] = useState<number>( window.innerWidth );
 	const [ element, setElement ] = useState<Element | null>(null);
+	const [ activePage, setActivePage ] = useState(1);
 	const location = useLocation();
+
+	useEffect(() => {
+		if (location.pathname	=== '/about')
+			setActivePage(0);
+		else if(location.pathname === '/experiences')
+			setActivePage(2);
+		else
+			setActivePage(1);
+	}, [location]);
 
 	useEffect(() => {
 		setLang(localStorage.getItem('lang') || 'en');
@@ -44,13 +54,13 @@ function App() {
 			<AnimatePresence mode='wait'>
 				<Routes location={location} key={location.key}>
 					<Route path="/"	element={<Homepage width={width}/>}></Route>
-					<Route path="/about" element={<About />}></Route>
-					<Route path="/experiences" element={<Experiences />}></Route>
+					<Route path="/about" element={<About width={width}/>}></Route>
+					<Route path="/experiences" element={<Experiences width={width}/>}></Route>
 					<Route path="*" element={<Navigate to="/" replace />} />
 				</Routes>
 			</AnimatePresence>
 			<Footer/>
-			{element && width <= 751 && <BottomBar/>}
+			{element && width <= 751 && <BottomBar activePage={activePage}/>}
 
 			{element && width > 751 && [...Array(width > 1200 ? 10 : 4)].map((e, i) => 
 				<BackgroundSymbol 

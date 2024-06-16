@@ -17,7 +17,7 @@ function Header({ lang, changeLanguageHandler } : HeaderProp) {
 
   window.onscroll = function() {
     window.scrollY > 0 ?
-      myNav!.style.background = '#fafafa' :
+      myNav!.style.background = getComputedStyle(document.body).getPropertyValue('--background-color') :
       myNav!.style.background = 'none'
   }
 
@@ -29,7 +29,7 @@ function Header({ lang, changeLanguageHandler } : HeaderProp) {
         </Link>
       </div>
       <div className={style.actionsContainer}>
-        <SelectLang lang={lang} setLang={changeLanguageHandler}/>
+        {/*<SelectLang lang={lang} setLang={changeLanguageHandler}/>*/}
         <DarkModeToggle/>
         <IconButton className={'mobile-dnone'} aria-label="Linkedin" href='https://www.linkedin.com/in/simone-d%E2%80%99amilo-425521180/' target='_blank'>
           <LinkedInIcon fontSize='large' className={style.icon}/>

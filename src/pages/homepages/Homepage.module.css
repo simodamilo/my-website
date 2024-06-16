@@ -112,7 +112,7 @@
 
 @media only screen and (max-width: 768px) {
   .homepageContainer {
-    min-height: calc(100vh - 357px);
+    min-height: calc(100vh - 350px);
   }
 
   .mainImg {

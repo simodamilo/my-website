@@ -2,11 +2,17 @@ import './BottomBar.css';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const BottomBar = () => {
-  const [ active, setActive ] = useState(1);
+interface BottomBarProps {
+  activePage: number;
+}
+
+const BottomBar = ({ activePage }: BottomBarProps) => {
+  const [ active, setActive ] = useState(activePage);
+
+  useEffect(() => setActive(activePage), [activePage]);
 
   return (
     <div className='navigation'>
