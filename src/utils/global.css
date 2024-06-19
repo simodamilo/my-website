@@ -9,6 +9,9 @@ body {
 
   --font-family: monospace;
   --footer-color: #af6eeb;
+  --white-color: #fafafa;
+
+  font-size: 20px;
 }
 
 .dark {
@@ -21,7 +24,22 @@ body {
   --navigation-color: #fafafa;
 }
 
-@media only screen and (max-width: 600px) {
+html {
+  overflow-x: hidden;
+}
+
+
+@media only screen and (max-width: 959px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
   .mobile-dnone {
     display: none!important;
   }

@@ -1,25 +1,7 @@
 .mainTitle {
-  font-size: 64px;
+  font-size: 2.5em;
   font-weight: 900;
   font-family: var(--font-family);
   color: var(--primary-color);
   text-align: left;
-}
-
-@media only screen and (max-width: 2400px) {
-  .mainTitle {
-    font-size: 56px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .mainTitle {
-    font-size: 36px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .mainTitle {
-    font-size: 16px;
-  }
 }

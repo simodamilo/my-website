@@ -1,17 +1,19 @@
-html {
-  overflow-x: hidden;
+.main {
+  display: flex;
+  justify-content: center;
 }
 
 .homepageContainer {
+  width: 100%;
+  max-width: 900px;
   display: flex;
   padding: 24px;
-  margin-top: 84px;
-  height: calc(100vh - 132px);
+  min-height: calc(100vh - 206px);
+  height: 100%;
 }
 
-.firstColumn {
-  width: 66%;
-  height: 100%;
+.content {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -19,7 +21,7 @@ html {
 
 .textModuleContainer {
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -27,102 +29,48 @@ html {
 
 .imgContainer {
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .mainImg {
-  width: 500px;
+  width: 420px;
   height: fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.secondColumn {
-  width: 33%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.navBtn1 {
-  padding-right: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.navBtn2 {
-  padding-left: 30px;
-  margin-top: 1px;
-  display: flex;
-  justify-content: center;
-}
-
-.clip1 {
-  clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
-  background-color: var(--primary-color);
-  width: 10px;
-  height: 20px;
-  margin: 0px auto;
-  margin-bottom: 1px;
-}
-
-.clip2 {
-  background-color: var(--primary-color);
-  width: 10px;
-  height: 100px;
-  margin: 0px auto;
-  margin-top: 1px;
-}
-
-@media only screen and (max-width: 2400px) {
-  .firstColumn {
-    flex-direction: column;
-    width: 50%;
-    padding-left: 10%;
-    align-items: left;
-  }
-
-  .textModuleContainer, .imgContainer {
-    width: 100%;
-    justify-content: start;
-  }
-
-  .secondColumn {
-    width: 33%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 959px) {
   .homepageContainer {
     display: block;
     padding-left: 12px;
     padding-right: 12px;
-    width: calc(100% - 24px);
   }
 
-  .firstColumn {
+  .content {
     width: 100%;
     height: auto;
     align-items: center;
-    padding-left: 0px;
+    flex-direction: column;
   }
 
   .mainImg {
-    width: 60%;
-    height: auto;
-  }
-
-  .secondColumn {
-    width: 100%;
-    height: auto;
+    width: 500px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .homepageContainer {
+    min-height: calc(100vh - 242px);
+    margin-bottom: 110px;
+    margin-top: 84px;
+  }
+
   .mainImg {
     width: 90%;
+    max-width: 450px;
     height: auto;
   }
 }

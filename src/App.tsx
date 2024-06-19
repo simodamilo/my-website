@@ -7,15 +7,25 @@ import About from "./pages/about/About";
 import Homepage from "./pages/homepages/Homepage";
 import Experiences from "./pages/experiences/Experiences";
 import BackgroundSymbol from "./components/background-symbol/BackgroundSymbol";
-import Footer from "./components/footer/Footer";
 import BottomBar from "./components/bottom-bar/BottomBar";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
 	const { i18n: {changeLanguage, language} } = useTranslation();
 	const [ lang, setLang ] = useState<string>(language);
 	const [ width, setWidth ] = useState<number>( window.innerWidth );
 	const [ element, setElement ] = useState<Element | null>(null);
+	const [ activePage, setActivePage ] = useState(1);
 	const location = useLocation();
+
+	useEffect(() => {
+		if (location.pathname	=== '/about')
+			setActivePage(0);
+		else if(location.pathname === '/experiences')
+			setActivePage(2);
+		else
+			setActivePage(1);
+	}, [location]);
 
 	useEffect(() => {
 		setLang(localStorage.getItem('lang') || 'en');
@@ -41,18 +51,18 @@ function App() {
 	return (
 		<div className="App">			
 			<Header lang={lang} changeLanguageHandler={changeLanguageHandler}/>
+			{element && width > 751 && <Navigation page={activePage} />}
 			<AnimatePresence mode='wait'>
 				<Routes location={location} key={location.key}>
-					<Route path="/"	element={<Homepage width={width}/>}></Route>
-					<Route path="/about" element={<About />}></Route>
-					<Route path="/experiences" element={<Experiences />}></Route>
+					<Route path="/"	element={<Homepage width={width} activePage={activePage}/>}></Route>
+					<Route path="/about" element={<About width={width}/>}></Route>
+					<Route path="/experiences" element={<Experiences width={width}/>}></Route>
 					<Route path="*" element={<Navigate to="/" replace />} />
 				</Routes>
 			</AnimatePresence>
-			<Footer/>
-			{element && width < 768 && <BottomBar/>}
+			{element && width <= 751 && <BottomBar activePage={activePage}/>}
 
-			{element && width > 1200 && [...Array(width > 1200 ? 10 : 4)].map((e, i) => 
+			{element && width > 751 && [...Array(width > 1200 ? 10 : 4)].map((e, i) => 
 				<BackgroundSymbol 
 					initPosX={Math.random() * (element!.clientWidth-100) + 1}
 					initPosY={Math.random() * (element!.clientHeight-100)}
