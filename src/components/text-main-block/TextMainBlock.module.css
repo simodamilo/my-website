@@ -7,7 +7,7 @@
 }
 
 .subtitle {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--secondary-color);
   font-family: var(--font-family);
   text-align: left;
@@ -15,7 +15,7 @@
 }
 
 .p1 {
-  font-size: 1.5em;
+  font-size: 1em;
   color: var(--primary-color);
   font-family: var(--font-family);
   text-align: left;

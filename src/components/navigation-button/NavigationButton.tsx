@@ -17,20 +17,13 @@ const NavigationButton = ({ label, direction, to, setNewPage }: NavButtonProp) =
 
   return(
     <div className={style.boxParent}>
-      <div className={`${style.btn} ${direction === 'left' ? style.leftArrow : style.rightArrow}`}>
+      <div className={`${style.btnBorder} ${direction === 'left' ? style.leftArrow : style.rightArrow}`}>
         <NavLink to={to} className={style.navLink} onClick={handleClick}>
-          <p className={style.btnLabel}>{label}</p>
+          <div className={`${style.btn} ${direction === 'left' ? style.leftArrow : style.rightArrow}`}>
+            <p className={`${style.btnLabel} ${direction === 'left' ? style.btnLabelLeft : style.btnLabelRight}`}>{label}</p>
+          </div>
         </NavLink>
       </div>
-      <svg className={style.fltSvg} xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="flt_tag">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />    
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
-            <feComposite in="SourceGraphic" in2="flt_tag" operator="atop"/>
-          </filter>
-        </defs>
-      </svg>
     </div>
   );
 }
